@@ -1,7 +1,6 @@
 <?php
 namespace GRFG\Breadcrumb;
 
-use GRFG\Breadcrumb\Config\Breadcrumb;
 use Config\App;
 
 class Breadcrumbs {
@@ -23,7 +22,10 @@ class Breadcrumbs {
      */
     public function __construct()
     {
-        $breadcrumb_config = config(Breadcrumb::class);
+        if (class_exists(Config\Breadcrumb::class))
+            $breadcrumb_config = config(Config\Breadcrumb::class);
+        else
+            $breadcrumb_config = config(GRFG\Breadcrumb\Config\Breadcrumb::class);
         $app_config = config(App::class);
 
         $this->tag_open = $breadcrumb_config->tagOpen;
