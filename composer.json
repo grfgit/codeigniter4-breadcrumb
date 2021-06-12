@@ -1,0 +1,27 @@
+{
+    "name": "grfg/codeigniter4-breadcrumb",
+    "description": "Smart and Small Breadcrumb for Codeigniter 4.",
+    "keywords": [
+        "grfg",
+        "breadcrumb",
+        "codeigniter",
+        "codeigniter4"
+    ],
+    "homepage": "https://grfg.dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gholam reza Farhang ghahremani",
+            "email": "greza.farhangg@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GRFG\\Breadcrumb\\": "src/",
+            "GRFG\\Breadcrumb\\Config\\": "src/config"
+        }
+    }
+}
